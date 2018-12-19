@@ -23,6 +23,6 @@ nu=input("Enter first number")
 no=input("Enter the second number")
 sum=nu+no
 print(sum)
-print("It is connecting the two numbers fu*k",end=" ")
+print("It is connecting the two numbers this is a prblm",end=" ")
 print("Hang on let us find the solution to this in other commit")
 input("Press to enter to exit")
