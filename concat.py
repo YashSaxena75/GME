@@ -1,4 +1,5 @@
-#concat # use of '//'
+# concat
+# use of '//'
 print("He"+"y"+" this is go"+"ing to be a ve"+"ry Weird code"+" Bcz this is writ"+"ten with +"+"\nany ways good bye")
 print()
 print()
@@ -13,7 +14,7 @@ print(2-3)
 print(2*3)
 print(2/3)
 print(2//3)
-naam ="Larry"
+naam =" Larry "
 print(naam)
 print("Hi"+" "+naam)
 print("Let us ask the user his/her name")
@@ -21,8 +22,9 @@ name=input("What is ur name my dear user?")
 print("HI!!!"+ name)
 nu=input("Enter first number")
 no=input("Enter the second number")
-sum=nu+no
+sum=int(no)+int(nu)
 print(sum)
 print("It is connecting the two numbers this is a prblm",end=" ")
 print("Hang on let us find the solution to this in other commit")
-input("Press to enter to exit")
+print("So to sum up the two numbers you must write the line no as mentioned in the comments")
+#Comments:-Line number 25
