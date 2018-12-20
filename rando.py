@@ -12,16 +12,20 @@ print(z)
 print()
 y=int(input("Please enter ur number to win this game"))
 while y!=z:
-  if y==z:
-    print("I am here")
-    c+=1
-    print("No. of tries is:",c)
-  elif y!=z:
-     y = int(input("Enter ur guess again"))
-     c += 1
-     print("Tris:",c)
-  #if y==z:
-   #   print("Yipee!!!You win The game!!!")
+ if c<4:
+   if y==z:
+     print("I am here")
+     c+=1
+     print("No. of tries is:",c)
+   elif y!=z:
+      y = int(input("Enter ur guess again"))
+      c += 1
+      print("Tris:",c)
+
+ else:
+     print("You can't try any more")
+     break
+
 
 
 input("Enter to exit")
