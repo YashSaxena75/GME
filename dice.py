@@ -1,0 +1,10 @@
+import random
+print("So let us play another game,So are You ready!!!!")
+input("Press Enter if you are ready")
+die1=random.randint(1,6)
+#random.randrange() generates number between 0-5 so if I add 1 then the numbers will become (1-6)
+#if you want to start from 0 then use random.randrange()    
+die2=random.randint(1,6)
+total=int(die1)+int(die2)
+print("Your total is:",total)
+input("You loose,press Enter to exit the game")
