@@ -26,6 +26,6 @@ while y!=z:
      print("You can't try any more")
      break
 
-
-
+if y==z:
+ print("Hey You win the game")
 input("Enter to exit")
