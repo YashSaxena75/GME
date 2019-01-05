@@ -24,13 +24,14 @@ else:
  else:
   print("Hint:th_re")
   print("Your score is -1")
-print("Now u know the hint if u guess the right word ur score will be increased by 1")
-b=input("Enter ur guess again but this is the last time:")
-if b==y:
- print("You win the game")
- print("Final score after watching the hint is 0")
-else:
- print("you can't try any more!!!you loose the game")
- print("\a")
- print("\a")
- print("I think u have pressed the wrong number from 1,2,3 may be the number u have pressed doesn't contain the hint for ur word")
+ print("Now u know the hint if u guess the right word ur score will be increased by 1")
+ b=input("Enter ur guess again but this is the last time:")
+ if b==y:
+  print("You win the game")
+  print("Final score after watching the hint is 0")
+ else:
+  print("you can't try any more!!!you loose the game")
+  print("\a")
+  print("\a")
+  print("I think u have pressed the wrong number from 1,2,3 may be the number u have pressed doesn't contain the hint for ur word")
+input("Press Enter to exit")
