@@ -16,7 +16,7 @@ print("""
                                                                                                  """)
 p=30
 flag=0
-att={"Strength":"You will loose 7.5 points","health":"Yo will loose 7.5 points"}
+att={"Strength":"You will loose 7.5 points","health":"You will loose 7.5 points"}
 print("Attribute list contains",list(att))
 while c!=0:
  c=int(input("Enter 0 here to exit or Enter 1 to continue the script:"))
