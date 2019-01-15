@@ -11,12 +11,11 @@ print("""
 
                   1:If you choose any attribute u will loose 7.5 points
                   2:You can take back ur points from that attribute
-                  3:This is a infinite game the only way to exit the game is to enter the 0
-                  4:ur score can also go in minus(-)
+                  3:You will loose the game if ur points become 0 or less than 0
                                                                                                  """)
 p=30
 flag=0
-att={"Strength":"You will loose 7.5 points","health":"You will loose 7.5 points"}
+att={"Strength":"You will loose 7.5 points","health":"Yo will loose 7.5 points"}
 print("Attribute list contains",list(att))
 while c!=0:
  c=int(input("Enter 0 here to exit or Enter 1 to continue the script:"))
@@ -49,3 +48,6 @@ while c!=0:
      print("U are trying to cheat bro","now if you continue u will loose more points")
   else:
    print("According to u,u have entered the correct attribute so proceeding further.....")
+ if p<=0:
+  print("As ur points are zero now so You loose the game!exiting the game")
+  c=0
