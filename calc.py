@@ -14,20 +14,26 @@ def hell():
      if prev==0:
       eq=input("Enter Your equation here:")
      else:
-          print("Enter another number here:")
+          print(">>>",end=" ")
           eq=input(str(prev))
+          print(" ")
      if eq == '\q':
           print("Good-Bye")
+          print("Made by humanoid_hater(Yash Saxena)")
           run = False
      else:
           eq=re.sub('[a-zA-Z,.:@()" "!#$^&=?<>{}`~;:]','',eq)
           if prev==0:
-           prev=eval(eq)
-           print("You have entered:",prev)
+           try:
+            prev=eval(eq)
+            print("You have entered:",prev)
+           except:
+                print("Divide by zero error")
           else:
-            prev=eval(str(prev)+eq)
+            try:
+             prev=eval(str(prev)+eq)
+            except:
+             print("Divide by zero error")
 
 while run:
      hell()
-
-
