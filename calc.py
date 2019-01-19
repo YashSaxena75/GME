@@ -2,7 +2,7 @@ import re
 print("Welcome to my magical calculator")
 print("--------------------Instructions-------------------")
 print("""
-                              1.Type '\q' anytime to exit
+                              1.Type '\q' anytime to exit    
                               2.ur equation must look like(a+b) 
                               3.you can do as many calculations as u want                         """)
 run=True
@@ -28,12 +28,12 @@ def hell():
             prev=eval(eq)
             print("You have entered:",prev)
            except:
-                print("Divide by zero error")
+                print("I can't think upto infinity....give another try")
           else:
             try:
              prev=eval(str(prev)+eq)
             except:
-             print("Divide by zero error")
+             print("I can't think upto infinity....give another try")
 
 while run:
      hell()
