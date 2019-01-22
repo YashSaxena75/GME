@@ -1,3 +1,5 @@
+#may be the colors name are not correct so check it out by urself!!!
+
 import time
 class Base:
     # Foreground:
