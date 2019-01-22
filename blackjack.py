@@ -1,3 +1,4 @@
+import time
 class Base:
     # Foreground:
     HEADER = '\033[95m'
@@ -87,4 +88,8 @@ print("\n")
 print("My hand have:",hand)
 print("3/5",Base.OKBLUE+"|██████████    |"+Base.END)
 
-
+print("Clearing my hand......")
+hand.clear()
+time.sleep(3)
+print("Now I have:",hand)
+print("0/5",Base.OKBLUE+"|█|"+Base.END)
