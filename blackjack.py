@@ -1,12 +1,10 @@
-#may be the colors name are not correct so check it out by urself!!!
-
 import time
 class Base:
     # Foreground:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
+    OKGREEN = '\033[93m'
+    WARNING = '\033[92m'
     FAIL = '\033[91m'
     # Formatting
     BOLD = '\033[1m'
@@ -16,7 +14,26 @@ class Base:
     NC ='\x1b[0m' # No Colo
 
 print("Let us Play the BLackJack Game")
-print(Base.WARNING+"|███████████████████████████|"+Base.END)
+print("\n")
+print("|",end="")
+print(Base.WARNING+"███"+Base.END,end="")
+time.sleep(0.8)
+print(Base.WARNING+"███"+Base.END,end="")
+time.sleep(0.8)
+print(Base.WARNING+"███"+Base.END,end="")
+time.sleep(0.8)
+print(Base.WARNING+"███"+Base.END,end="")
+time.sleep(0.8)
+print(Base.WARNING+"███"+Base.END,end="")
+time.sleep(0.8)
+print(Base.WARNING+"███"+Base.END,end="")
+time.sleep(0.8)
+print(Base.WARNING+"███"+Base.END,end="")
+print("|","")
+time.sleep(0.8)
+
+
+print("\n")
 class Card:
     ranks=["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
     suits=["c","d","h","s"]
@@ -66,7 +83,7 @@ print("",Cards,"\n",Card1,"\n",Card2,"\n",Card3,"\n",Card4,"\n")
 hand=Hand()
 
 print("Currently my hand is:",hand,"/",hand,":",end=" ")
-print(Base.OKBLUE+"||"+Base.END," ")
+print(Base.WARNING+"||"+Base.END," ")
 
 
 hand.addcards(Cards)
@@ -75,7 +92,7 @@ hand.addcards(Card2)
 hand.addcards(Card3)
 hand.addcards(Card4)
 print("After Adding 5 cards from the above list i Have:",hand)
-print("5/5",Base.OKBLUE+"|█████████████|"+Base.END," ")
+print("5/5",Base.OKGREEN+"|██████████|"+Base.END," ")
 
 
 print("I am giving you my two cards:")
@@ -85,13 +102,14 @@ hand.give(Cards,oh)
 hand.give(Card1,oh)
 
 print("Now ur hand have:",oh)
-print("2/2",Base.FAIL+"|█████████████|"+Base.END)
+print("2/2",Base.FAIL+"|█████████|"+Base.END)
 print("\n")
 print("My hand have:",hand)
-print("3/5",Base.OKBLUE+"|██████████    |"+Base.END)
+print("3/5",Base.BOLD+"|███|"+Base.END)
 
 print("Clearing my hand......")
 hand.clear()
 time.sleep(3)
 print("Now I have:",hand)
-print("0/5",Base.OKBLUE+"|█|"+Base.END)
+print("0/5",Base.NC+"|█|"+Base.END)
+print("Press Enter to exit")
