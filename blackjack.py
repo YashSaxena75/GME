@@ -1,4 +1,6 @@
 import time
+import sys
+import random
 class Base:
     # Foreground:
     HEADER = '\033[95m'
@@ -16,27 +18,25 @@ class Base:
 print("Let us Play the BLackJack Game")
 print("\n")
 print("|",end="")
-print(Base.WARNING+"███"+Base.END,end="")
-print("|",end="")
-time.sleep(0.8)
-print(Base.WARNING+"███"+Base.END,end="")
-print("|",end="")
-time.sleep(0.8)
-print(Base.WARNING+"███"+Base.END,end="")
-print("|",end="")
-time.sleep(0.8)
-print(Base.WARNING+"███"+Base.END,end="")
-print("|",end="")
-time.sleep(0.8)
-print(Base.WARNING+"███"+Base.END,end="")
-print("|",end="")
-time.sleep(0.8)
-print(Base.WARNING+"███"+Base.END,end="")
-print("|",end="")
-time.sleep(0.8)
-print(Base.WARNING+"███"+Base.END,end="")
+print(Base.WARNING+"██|"+Base.END,end="")
+sys.stdout.flush()
+time.sleep(0.3)
+print(Base.WARNING+"██|"+Base.END,end="")
+sys.stdout.flush()
+time.sleep(0.3)
+print(Base.WARNING+"██|"+Base.END,end="")
+sys.stdout.flush()
+time.sleep(0.3)
+print(Base.WARNING+"██|"+Base.END,end="")
+sys.stdout.flush()
+time.sleep(0.3)
+print(Base.WARNING+"██|"+Base.END,end="")
+sys.stdout.flush()
+time.sleep(0.3)
+print(Base.WARNING+"██"+Base.END,end="")
+sys.stdout.flush()
 print("|")
-time.sleep(0.8)
+time.sleep(0.3)
 
 
 print("\n")
@@ -118,4 +118,78 @@ hand.clear()
 time.sleep(3)
 print("Now I have:",hand)
 print("0/5",Base.NC+"|█|"+Base.END)
-print("Press Enter to exit")
+
+class Deck(Hand):
+    def pop(self):
+        for rank in Card.ranks:
+            for suit in Card.suits:
+                self.addcards(Card(rank,suit))
+
+    def shuff(self):
+        random.shuffle(self.cards)
+
+    def deal(self, hands, per_hand=1):
+        for rounds in range(per_hand):
+            for hand in hands:
+                if self.cards:
+                 top_card = self.cards[0]
+                 self.give(top_card, hand)
+                else:
+                 print("Can't continue deal. Out of cards!")
+
+
+d=Deck()
+print("Creating a new deck..")
+print("Deck:")
+print(d)
+d.pop()
+print("Now Deck contains all the 52 cards but after shuffling the cards are:")
+d.shuff()
+print(d)
+hands=[hand,oh]
+
+d.deal(hands,per_hand=5)
+print("after adding 5 cards to per hand u both have:")
+print("My hand have:")
+print(hand)
+print("Ur hand:")
+print(oh)
+
+d.clear()
+print("\nDack is cleared now")
+print(d)
+
+class Unprintable_Card(Card):
+    def __str__(self):
+        return "<unprintable>"
+
+class Positionable_Card(Card):
+       def __init__(self, rank, suit, face_up=True):
+            super(Positionable_Card, self).__init__(rank, suit)
+            self.is_face_up = face_up
+
+       def __str__(self):
+           if self.is_face_up:
+               rep = super(Positionable_Card, self).__str__() #This statement calls the Super lcass constructor
+           else:#the first line " tells the python to call the super const. of the class Positionable_card
+               rep = "XX"
+           return rep
+
+       def flip(self):
+        self.is_face_up = not self.is_face_up
+
+
+card1 = Card("A", "c")
+card2 = Unprintable_Card("A", "d")
+card3 = Positionable_Card("A", "h")
+print("Printing a Card object:")
+print(card1)
+print("\nPrinting an Unprintable_Card object:")
+print(card2)
+print("\nPrinting a Positionable_Card object:")
+print(card3)
+print("Flipping the Positionable_Card object.")
+card3.flip()
+print("Printing the Positionable_Card object:")
+print(card3)
+input("\n\nPress the enter key to exit.")
