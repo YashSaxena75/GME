@@ -45,16 +45,16 @@ while c!='\q':
  
    ch=int(input("Enter ur choice here:"))
    if ch==1:
-    print("Addition of two numbers is:",int(f)+int(s))
+    print("Addition of two numbers is:",float(f)+float(s))
    elif ch==2:
-    print("Difference of two numbers is:",int(f)-int(s))
+    print("Difference of two numbers is:",float(f)-float(s))
    elif ch==3:
     try:
-     print("Division of two numbers is:",int(f)/int(s))
+     print("Division of two numbers is:",float(f)/float(s))
     except:
      print(color.FAIL+"Divide by zero Error..."+color.END)
    elif ch==4:
-    print("Multiplication of two numbers is:",int(f)*int(s))
+    print("Multiplication of two numbers is:",float(f)*float(s))
    c=input("want to perfrom some more calculations then enter c and if not then enter \q here:")
    if c=='c':
     for t in w:
