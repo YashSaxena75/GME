@@ -28,7 +28,7 @@ def conv():
   #print(h)
   upacked=socket.inet_ntoa(packed)
 
- print "IP address:",h
+ print "IP address:"
  print "Unpacked====>",upacked 
  print "Packed====>"
  print hexlify(packed) 
