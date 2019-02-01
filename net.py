@@ -10,10 +10,12 @@ class color:
     # End colored text
     END = '\033[0m' 
 h_name=""
+
+from termcolor import colored, cprint
 import socket
 from binascii import hexlify
 def mac():
- h_name=input("Enter the machine u want to search for:")
+ h_name=raw_input("Enter the machine u want to search for:")
  try:
   print(color.OKBLUE+"IP address of "+h_name+":"+socket.gethostbyname(h_name)+color.END)
  except:
@@ -26,12 +28,24 @@ def conv():
   #print(h)
   upacked=socket.inet_ntoa(packed)
 
- print("IP address:",h)
- print("Unpacked====>",upacked)
- print("Packed====>",end="")
- print(hexlify(packed))
+ print "IP address:",h
+ print "Unpacked====>",upacked 
+ print "Packed====>"
+ print hexlify(packed) 
 
+def port():
+ prot='tcp'
+ p=int(input("Enter the port number here in tcp:"))
+ try:
+  print(socket.getservbyport(p,prot))
+ except:
+  blue = colored('No such port exists', 'red', attrs=['blink'], )
+  print(blue)
+
+# r=int(input("Enter the port number here in udp:"))
+# print(socket.getservbyport(r,prots))
 
 if __name__=='__main__':
  mac()
  conv()
+ port()
