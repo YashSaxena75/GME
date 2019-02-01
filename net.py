@@ -9,28 +9,29 @@ class color:
     UNDERLINE = '\033[4m'
     # End colored text
     END = '\033[0m' 
-
+h_name=""
 import socket
-c=None
-cont=["www.google.com","www.bing.com","www.gmail.com","www.images.google.com"]
-print("you can know the IP of the following machines")
-for i in cont:
- print(i)
-
-j=int(input("Enter the number for ur choice...first one starts from 0 index! Please enter ur choice here:"))
-if j==0:
- h_name="www.google.com"
-elif j==1:
- h_name="www.bing.com"
-elif j==2:
- h_name="www.gmail.com"
-else:
- h_name="www.images.google.com"
+from binascii import hexlify
 def mac():
+ h_name=input("Enter the machine u want to search for:")
  try:
-  print(color.WARNING+"IP address of "+h_name+":"+socket.gethostbyname(h_name)+color.END)
+  print(color.OKBLUE+"IP address of "+h_name+":"+socket.gethostbyname(h_name)+color.END)
  except:
   print("Please Check ur internet connection...")
 
+
+def conv():
+ for h in ['127.0.0.1','192.168.43.248']:
+  packed=socket.inet_aton(h)
+  #print(h)
+  upacked=socket.inet_ntoa(packed)
+
+ print("IP address:",h)
+ print("Unpacked====>",upacked)
+ print("Packed====>",end="")
+ print(hexlify(packed))
+
+
 if __name__=='__main__':
  mac()
+ conv()
