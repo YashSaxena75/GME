@@ -1,0 +1,25 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	/*	int a=10;
+		Console.WriteLine(a);*/
+		int[] a =new int[5];int i=0;
+		Console.WriteLine("Enter 5 elem in the array to reverse the array");
+		for(i=0;i<5;i++)
+		{
+			a[i]=Convert.ToInt32(Console.ReadLine());
+		}
+		Console.WriteLine("Reversing the array:");
+		for(i=4;i>=0;i--)
+		{
+			Console.WriteLine(a[i]);
+		}
+		Console.WriteLine("Length of the array is:");
+		Console.WriteLine(a.Length);
+	}
+	/*a=90;
+	Console.WriteLine(a);*/
+}
