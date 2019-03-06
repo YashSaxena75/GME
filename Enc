@@ -1,3 +1,4 @@
+k=''
 class color:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -396,6 +397,32 @@ def simdec():
   print(chr(k),end="")
   li=li-1
 
+def cenc():
+ s="abcdefghijklmnopqrstuvwxyz"
+ print("Current working string is:",s)
+ k=input("Input a single word key u want to use for encryption:")
+ i=ord(k)
+ s=s.replace(k,'')
+ s=k+s
+ print("Now string is:",s)
+ t=input("Enter the string to Encrypt here:")
+ li=len(t)
+ print("Encrypted string is:",end="")
+ while li!=0:
+  for n in t:
+   j=ord(n)
+   if j==ord('a'):
+    j=i
+    print(chr(j),end="")
+    li=li-1
+   elif j>97 and j<i:
+    j=j-1
+    print(chr(j),end="")
+    li=li-1
+   elif j>=i:
+    print(chr(j),end="")
+    li=li-1
+
 def delay_print(s):
  for c in s:
   print(c,end="")
@@ -499,3 +526,8 @@ elif c==4:
   g=int(input("\nTo do more task in Simple method enter 5 otherwise 0:"))
  if g!=0:
   f()
+
+
+
+elif c==5:
+ cenc()
