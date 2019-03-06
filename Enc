@@ -317,6 +317,7 @@ def rot22enc():
  s=input("Enter ur string here to encrypt:")
  li=len(s)
  print(color.FAIL+"Encrypted string is:"+color.END,end="")
+ print("\n")
  time.sleep(4)
  while li!=0:
   for i in s:
@@ -355,15 +356,45 @@ def rot22dec():
  s=""
  s=input("Enter the encrypted string to decrypt it:")
  li=len(s)
- print(color.FAIL+"Decrypted string is:"+color.END,end="")
+ print(color.FAIL+"\nDecrypted string is:"+color.END,end="")
+ print("\n")
  time.sleep(4)
  while li!=0:
   for i in s:
    j=ord(i)
-   
+   if j>=119 and j<=122:
+    j=j-22
+    print(chr(j),end="")
+    li=li-1
+   elif j>=97 and j<=118:
+    j=j+4
+    print(chr(j),end="")
+    li=li-1
+    
 
+def simenc():
+ s=""
+ s=input("Enter the string to encrypt here:")
+ li=len(s)
+ print(color.HEADER+"Encrypted string is:"+color.END,end="")
+ print("\n")
+ for i in s:
+  k=ord(i)
+  k=k+1
+  print(chr(k),end="")
+  li=li-1
 
-
+def simdec():
+ s=""
+ s=input("Enter the encrypted string here to decrypt it:")
+ li=len(s)
+ print(color.HEADER+"Decrypted string is"+color.END,end="")
+ print("\n")
+ for i in s:
+  k=ord(i)
+  k=k-1
+  print(chr(k),end="")
+  li=li-1
 
 def delay_print(s):
  for c in s:
@@ -429,4 +460,42 @@ elif c==2:
     pr()
 
 elif c==3:
- rot22enc()
+ def p():
+   print("""            1.encrypt the text
+              2.Decrypt the text
+ 
+
+                                    """)
+
+ p()
+ cc=None
+ while cc!=0:
+  f=int(input("Enter ur choice what to do now:"))
+  if f==1:
+   rot22enc()
+  else:
+   rot22dec()
+  cc=int(input("To do more task in ROT22 enter 4 otherwise 0:"))
+  print("\n")
+  if cc!=0:
+   p()
+
+
+elif c==4:
+ def f():
+   print("""            1.encrypt the text
+              2.Decrypt the text
+ 
+
+                                    """)
+ f()
+ g=None
+ while g!=0:
+  f=int(input("Enter ur choice what to do now:"))
+  if f==1:
+   simenc()
+  else:
+   simdec()
+  g=int(input("\nTo do more task in Simple method enter 5 otherwise 0:"))
+ if g!=0:
+  f()
