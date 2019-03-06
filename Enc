@@ -1,0 +1,432 @@
+class color:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[93m'
+    WARNING = '\033[92m'
+    FAIL = '\033[91m'
+    # Formatting
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    # End colored text
+    END = '\033[0m'
+import re
+import progressbar
+import sys
+import time
+from tqdm import tqdm
+
+print(color.OKBLUE+"Author:humanoid_hater"+color.END)
+print("""
+                   *   *
+                     .
+                     _
+
+
+
+                                            """)
+
+def bashenc():
+  delay_print("Atbash encryption method ready to launch!")
+  s=""
+  print("\n")
+  s=input("Enter ur message here to encrypt:")
+# if s==re.sub(' ','',s):
+  l=len(s)
+#  print(l)
+  delay_print(color.WARNING+"Encrypted string is:"+color.END)
+  time.sleep(4)
+  while l!=0:
+   for t in s:
+    if t=='a':
+     y=97+25
+     print(chr(y),end="")
+     l=l-1
+    elif t=='b':
+     u=98+23
+     print(chr(u),end="")
+     l=l-1
+    elif t=='c':
+     u=99+21
+     print(chr(u),end="")
+     l=l-1
+    elif t=='d':
+     u=100+19
+     print(chr(u),end="")
+     l=l-1
+    elif t=='e':
+     u=101+17
+     print(chr(u),end="")
+     l=l-1
+    elif t=='f':
+     u=102+15
+     print(chr(u),end="")
+     l=l-1
+    elif t=='g':
+     u=103+13
+     print(chr(u),end="")
+     l=l-1
+    elif t=='h':
+     u=104+11
+     print(chr(u),end="")
+     l=l-1
+    elif t=='i':
+     u=105+9
+     print(chr(u),end="")
+     l=l-1
+    elif t=='j':
+     u=106+7
+     print(chr(u),end="")
+     l=l-1
+    elif t=='k':
+     u=107+5
+     print(chr(u),end="")
+     l=l-1
+    elif t=='l':
+     u=108+3
+     print(chr(u),end="")
+     l=l-1
+    elif t=='m':
+     u=109+1
+     print(chr(u),end="")
+     l=l-1
+    elif t=='n':
+     u=110-1
+     print(chr(u),end="")
+     l=l-1
+    elif t=='o':
+     u=111-3
+     print(chr(u),end="")
+     l=l-1
+    elif t=='p':
+     u=112-5
+     print(chr(u),end="")
+     l=l-1
+    elif t=='q':
+     u=113-7
+     print(chr(u),end="")
+     l=l-1
+    elif t=='r':
+     u=114-9
+     print(chr(u),end="")
+     l=l-1
+    elif t=='s':
+     u=115-11
+     print(chr(u),end="")
+     l=l-1
+    elif t=='t':
+     u=116-13
+     print(chr(u),end="")
+     l=l-1
+    elif t=='u':
+     u=117-15
+     print(chr(u),end="")
+     l=l-1
+    elif t=='v':
+     u=118-17
+     print(chr(u),end="")
+     l=l-1
+    elif t=='w':
+     u=119-19
+     print(chr(u),end="")
+     l=l-1
+    elif t=='x':
+     u=120-21
+     print(chr(u),end="")
+     l=l-1
+    elif t=='y':
+     u=121-23
+     print(chr(u),end="")
+     l=l-1
+    elif t=='z':
+     u=122-25
+     print(chr(u),end="")
+     l=l-1
+    elif t==' ':
+     k=32
+     print(chr(k),end="")
+     l=l-1
+    elif t==':':
+     o=58
+     print(chr(o),end="")
+     l=l-1
+    elif t=='@':
+     r=64
+     print(chr(r),end="")
+     l=l-1
+    elif ord(t)>=ord('a') or ord(t)<=ord('z'):
+     print(t,end="")
+     l=l-1
+    elif t=='.':
+     n=46
+     print(chr(n),end="")
+     l=l-1
+
+ #else:
+ #  print("Wrong string was entered!!")
+
+
+def bashdec():
+ s=""
+ s=input("Enter the Encrypted string here to decrypt it:")
+ le=len(s)
+ delay_print(color.WARNING+"Decrypted string is:"+color.END)
+ time.sleep(4)
+ while le!=0:
+  for j in s:
+   if j=='z':
+    print("a",end="")
+    le=le-1
+   elif j=='y':
+    print("b",end="")
+    le=le-1
+   elif j=='x':
+    print("c",end="")
+    le=le-1
+   elif j=='w':
+    print("d",end="")
+    le=le-1
+   elif j=='v':
+    print("e",end="")
+    le=le-1
+   elif j=='u':
+    print("f",end="")
+    le=le-1
+   elif j=='t':
+    print("g",end="")
+    le=le-1
+   elif j=='s':
+    print("h",end="")
+    le=le-1
+   elif j=='r':
+    print("i",end="")
+    le=le-1
+   elif j=='q':
+    print("j",end="")
+    le=le-1
+   elif j=='p':
+    print("k",end="")
+    le=le-1
+   elif j=='o':
+    print("l",end="")
+    le=le-1
+   elif j=='n':
+    print("m",end="")
+    le=le-1
+   elif j=='m':
+    print("n",end="")
+    le=le-1
+   elif j=='l':
+    print("o",end="")
+    le=le-1
+   elif j=='k':
+    print("p",end="")
+    le=le-1
+   elif j=='j':
+    print("q",end="")
+    le=le-1
+   elif j=='i':
+    print("r",end="")
+    le=le-1
+   elif j=='h':
+    print("s",end="")
+    le=le-1
+   elif j=='g':
+    print("t",end="")
+    le=le-1
+   elif j=='f':
+    print("u",end="")
+    le=le-1
+   elif j=='e':
+    print("v",end="")
+    le=le-1
+   elif j=='d':
+    print("w",end="")
+    le=le-1
+   elif j=='c':
+    print("x",end="")
+    le=le-1
+   elif j=='b':
+    print("y",end="")
+    le=le-1
+   elif j=='a':
+    print("z",end="")
+    le=le-1
+   elif j==' ':
+    k=32
+    print(chr(k),end="")
+    le=le-1
+   elif j==':':
+    n=58
+    print(chr(n),end="")
+    le=le-1
+   elif j=='@':
+    v=64
+    print(chr(v),end="")
+    le=le-1
+   elif ord(j)>=ord('a') or ord(j)<=ord('z'):
+    print(j,end="")
+    le=le-1
+   elif t=='.': 
+    n=46
+    print(chr(n),end="")
+    l=l-1
+
+
+def rotenc():
+ s=""
+ j=None
+ s=input("Enter ur string here to encrypt:")
+ li=len(s)
+ print(color.FAIL+"Encrypted string is:"+color.END,end="")
+ time.sleep(4)
+ while li!=0:
+  for i in s:
+   j=ord(i)
+   if j>=97 and j<=109:
+    j=j+13
+    #print(color.FAIL+"Encrypted string is:"+color.END,end="")
+    print(chr(j),end="") 
+    li=li-1
+   elif j>=110 and j<=122:
+    j=j-13
+    print(chr(j),end="")
+    li=li-1
+
+def rotdec():
+ s=""
+ s=input("Enter the encrypted string to decrypt it:")
+ li=len(s)
+ print(color.FAIL+"Decrypted string is:"+color.END,end="")
+ time.sleep(4)
+ while li!=0:
+  for i in s:
+   j=ord(i)
+   if j>=97 and j<=109:
+    j=j+13
+    print(chr(j),end="")
+    li=li-1
+   elif j>=110 and j<=122:
+    j=j-13
+    print(chr(j),end="")
+    li=li-1
+
+
+def rot22enc():
+ s=""
+ j=None
+ s=input("Enter ur string here to encrypt:")
+ li=len(s)
+ print(color.FAIL+"Encrypted string is:"+color.END,end="")
+ time.sleep(4)
+ while li!=0:
+  for i in s:
+   j=ord(i)
+   if j>=97 and j<=100:
+    j=j+22
+    #print(color.FAIL+"Encrypted string is:"+color.END,end="")
+    print(chr(j),end="") 
+    li=li-1
+   elif j>=101 and j<=104:
+    j=j-4
+    print(chr(j),end="")
+    li=li-1
+   elif j>=105 and j<=108:
+    j=j-4
+    print(chr(j),end="")
+    li=li-1
+   elif j>=109 and j<=112:
+    j=j-4
+    print(chr(j),end="")
+    li=li-1
+   elif j>=113 and j<=116:
+    j=j-4
+    print(chr(j),end="")
+    li=li-1
+   elif j>=117 and j<=120:
+    j=j-4
+    print(chr(j),end="")
+    li=li-1
+   elif j>=121 and j<=122:
+    j=j-4
+    print(chr(j),end="")
+    li=li-1
+
+def rot22dec():
+ s=""
+ s=input("Enter the encrypted string to decrypt it:")
+ li=len(s)
+ print(color.FAIL+"Decrypted string is:"+color.END,end="")
+ time.sleep(4)
+ while li!=0:
+  for i in s:
+   j=ord(i)
+   
+
+
+
+
+def delay_print(s):
+ for c in s:
+  print(c,end="")
+  sys.stdout.flush()
+  time.sleep(0.1)
+ 
+def bar():
+ progress = progressbar.ProgressBar()
+ for i in progress(range(25)):
+    time.sleep(0.001)
+
+
+delay_print("This Script Can Encrypt Ur Message In a Different Manner So That No Other Third Person Can Read It!")
+bar()
+print("""
+                  1.Atbash Encryption(only for small alphabets)
+                  2.Rot13
+                  3.Rot22
+                  4.Simple Encryption(add 1)
+                  5.caesar(with ur key) 
+ 
+                                              """)
+c=0
+ch=None
+c=int(input("Please Choose ur encryption Method from the following techniques listed above:"))
+if c==1:
+ def prnt():
+  print("""             1.encrypt the text
+              2.Decrypt the text
+ 
+
+                                    """)
+ prnt()
+ while ch!=0: 
+  f=int(input("Enter ur choice what to do now:"))
+  if f==1:
+   bashenc()
+  else:
+   bashdec()
+  ch=int(input("\nWant to do some more encryption-decryption task on Atbash then enter 2:")) 
+  if ch!=0:
+   prnt()
+
+elif c==2:
+  def pr():
+    print("""            1.encrypt the text
+              2.Decrypt the text
+ 
+
+                                    """)
+  pr()
+  hc=None
+  while hc!=0:
+   f=int(input("Enter ur choice what to do now:"))
+   if f==1:
+    rotenc()
+   else:
+    rotdec()
+   hc=int(input("To do some more task in ROT13 enter 3 otherwise 0:"))
+   print("\n")
+   if hc!=0:
+    pr()
+
+elif c==3:
+ rot22enc()
